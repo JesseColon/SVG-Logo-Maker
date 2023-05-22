@@ -1,8 +1,9 @@
 const inquirer = require('inquirer');
+const generateLogo = require('./lib/GenerateLogo');
 
 
 const { writeFile } = require('fs').promises;
-// TODO: Create an array of questions f.or user input
+
 const userPrompt = () =>{
   return  inquirer.prompt([
       {
@@ -14,7 +15,7 @@ const userPrompt = () =>{
           type: 'list',
           name: 'color',
           message: 'choose a color' ,
-          choices: ['blue, green, red, yellow, purple, orange']
+          choices: ['blue', 'green', 'red', 'yellow', 'purple', 'black', 'white']
         },
         {
           type: 'list',
@@ -26,9 +27,18 @@ const userPrompt = () =>{
           type: 'list',
           name: 'shapeColor',
           message: 'pick the shapes color',
-          choices: ['blue, green, red, yellow, purple, orange']
+          choices: ['blue', 'green', 'red', 'yellow', 'purple', 'black','white']
         },
     
        
     ])
 };
+
+const init = () => {
+    userPrompt()
+    .then((answers) => writeFile('logo.svg', generateLogo(answers)))
+    .then(() => console.log('Generated logo.svg'))
+    .catch((err) => console.error(err));
+};
+
+init();
