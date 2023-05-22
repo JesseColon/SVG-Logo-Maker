@@ -25,7 +25,7 @@ const userPrompt = () =>{
         },
         {
           type: 'list',
-          name: 'shapeColor',
+          name: 'backgroundColor',
           message: 'pick the shapes color',
           choices: ['blue', 'green', 'red', 'yellow', 'purple', 'black','white']
         },
