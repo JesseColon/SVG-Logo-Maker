@@ -18,9 +18,9 @@
 
 * https://github.com/JesseColon/SVG-Logo-Maker
 
-## Usage
+## Walkthrough Video
 
-* 
+* https://drive.google.com/file/d/1qN_46mORCalOeN_uC-1KmjgonFSaJaIL/view
 
 ## License
    MIT 
