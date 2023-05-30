@@ -1,14 +1,11 @@
+const {Shapes} = require('./shapes')
+
 class Square extends Shapes {
-    constructor(shape,color,backgroundColor) {
-      super(shape,color,backgroundColor) 
+    constructor(shape,shapeText) {
+      super(shape, shapeText) 
       this.shape = shape;
-      this.color = color;
-      this.backgroundColor = backgroundColor;
-      this.shapeText = [];
-    }
-    render() {
-        this.shapeText.push('rect x="100" y="65" width="100" height="100"');
+      this.shapeText = shapeText;
     }
 }
 
-module.exports = Square;
+module.exports = Square; 

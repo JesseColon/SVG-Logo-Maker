@@ -1,12 +1,11 @@
+const {Shapes} = require('./shapes')
+
 class Circle extends Shapes {
-    constructor(shape,color,backgroundColor) {
-      super(shape) 
+    constructor(shape,shapeText) {
+      super(shape, shapeText) 
       this.shape = shape;
-      this.shapeText = [];
-    }
-    render() { 
-      this.shapeText.push('circle cx="150" cy="100" r="80"');
-    }
+      this.shapeText = shapeText;
+    }    
 }
 
 module.exports = Circle;

@@ -1,14 +1,8 @@
-const Circle = require('./circle')
-const Square = require('./square')
-const Triangle = require('./triangle')
-
 class Shapes {
-    constructor(shape,color,backgroundColor,) {
+    constructor(shape,shapeText) {
         this.shape = shape;
-        this.color = color;
-        this.backgroundColor = backgroundColor;
-        this.shapeText = [];
+        this.shapeText = shapeText;
     }
 }
 
-module.exports = Shapes;
+module.exports = {Shapes};

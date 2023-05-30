@@ -1,13 +1,10 @@
+const {Shapes} = require('./shapes')
+
 class Triangle extends Shapes {
-    constructor(shape,color,backgroundColor) {
-      super(shape,color,backgroundColor)
+    constructor(shape, shapeText) {
+      super(shape, shapeText)
       this.shape = shape;
-      this.color = color;
-      this.backgroundColor = backgroundColor;
-      this.shapeText = [];
-    }
-    render() {
-      this.shapeText.push('polygon points="140,10 400,400 10,300"');
+      this.shapeText = shapeText;
     }
 }
 

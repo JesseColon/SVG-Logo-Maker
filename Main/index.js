@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
-const generateLogo = require('./lib/GenerateLogo');
-
+const {generateLogo, renderShape} = require('./lib/GenerateLogo');
+const Shapes = require('./lib/shapes')
 
 const { writeFile } = require('fs').promises;
 
@@ -36,7 +36,9 @@ const userPrompt = () =>{
 
 const init = () => {
     userPrompt()
-    .then((answers) => writeFile('logo.svg', generateLogo(answers)))
+    .then((answers) => 
+    {const shape = renderShape(answers.shape);
+       writeFile('logo.svg', generateLogo({...answers,shape:shape}))})
     .then(() => console.log('Generated logo.svg'))
     .catch((err) => console.error(err));
 };
