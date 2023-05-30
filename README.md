@@ -14,9 +14,9 @@
 * [Test](#test)
 * [Questions](#questions)
 
-## Installation
+## GitHub
 
-* 
+* https://github.com/JesseColon/SVG-Logo-Maker
 
 ## Usage
 
